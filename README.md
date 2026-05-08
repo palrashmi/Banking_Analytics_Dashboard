@@ -8,7 +8,6 @@ This project demonstrates an **end-to-end Data Analytics workflow** using SQL, P
 The goal of this project is to simulate a real-world banking environment where raw transactional data is transformed into actionable business insights for decision-making.
 
 ---
-
 ## 🎯 Business Problem
 
 Banks often struggle to:
