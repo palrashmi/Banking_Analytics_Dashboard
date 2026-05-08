@@ -1,0 +1,12 @@
+# Dashboard Page 2
+# Customer & Account Insights - DAX Measures
+
+## Total Customers
+Total Customers =
+DISTINCTCOUNT('CombinedBankingDataset'[CustomerID])
+
+
+
+## Total Accounts
+Total Accounts =
+DISTINCTCOUNT('CombinedBankingDataset'[Account_AccountID])

@@ -1,0 +1,36 @@
+# Dashboard Page 1
+#Transaction Analysis Dashboard - DAX Measures
+
+## Total Transactions
+Total Transactions =
+COUNT('CombinedBankingDataset'[TransactionID])
+
+
+
+## Total Transaction Amount
+Total Transaction Amount =
+SUM('CombinedBankingDataset'[Amount])
+
+
+
+## Debit Percentage
+Debit % =
+DIVIDE(
+    CALCULATE(
+        COUNT('CombinedBankingDataset'[TransactionID]),
+        'CombinedBankingDataset'[TransactionType] = "DEBIT"
+    ),
+    COUNT('CombinedBankingDataset'[TransactionID])
+) * 100
+
+
+
+## Credit Percentage
+Credit % =
+DIVIDE(
+    CALCULATE(
+        COUNT('CombinedBankingDataset'[TransactionID]),
+        'CombinedBankingDataset'[TransactionType] = "Credit"
+    ),
+    COUNT('CombinedBankingDataset'[TransactionID])
+) * 100
